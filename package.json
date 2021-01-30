@@ -4,10 +4,19 @@
   "description": "server side of the survey platform for medical research",
   "main": "\u001b[A\u001b[B",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hipstertwix/survey-server.git"
   },
   "author": "Koen Naarding",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hipstertwix/survey-server/issues"
+  },
+  "homepage": "https://github.com/hipstertwix/survey-server#survey-server",
   "dependencies": {
     "express": "^4.17.1"
   }
