@@ -9,15 +9,15 @@ function createData(time, amount) {
 }
 
 const data = [
-  createData('00:00', 0),
-  createData('03:00', 300),
-  createData('06:00', 600),
-  createData('09:00', 800),
-  createData('12:00', 1500),
-  createData('15:00', 2000),
-  createData('18:00', 2400),
-  createData('21:00', 2400),
-  createData('24:00', undefined),
+  createData('00:00', 12),
+  createData('03:00', 20),
+  createData('06:00', 4),
+  createData('09:00', 28),
+  createData('12:00', 38),
+  createData('15:00', 35),
+  createData('18:00', 15),
+  createData('21:00', 4),
+  createData('24:00', 3),
 ];
 
 export default function Chart() {
@@ -25,7 +25,7 @@ export default function Chart() {
 
   return (
     <React.Fragment>
-      <Title>Today</Title>
+      <Title>Aantal Responses Vandaag</Title>
       <ResponsiveContainer>
         <LineChart
           data={data}
@@ -43,10 +43,10 @@ export default function Chart() {
               position="left"
               style={{ textAnchor: 'middle', fill: theme.palette.text.primary }}
             >
-              Sales ($)
+              Aantal
             </Label>
           </YAxis>
-          <Line type="monotone" dataKey="amount" stroke={theme.palette.primary.main} dot={false} />
+          <Line type="monotone" dataKey="amount" stroke={theme.palette.secondary.main} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </React.Fragment>

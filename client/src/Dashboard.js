@@ -22,13 +22,14 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import Logo from './Logo';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="">
+        Psyvey
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -37,6 +38,8 @@ function Copyright() {
 }
 
 const drawerWidth = 240;
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -115,6 +118,9 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
+  logo: {
+    flexGrow: 1,
+  },
 }));
 
 export default function Dashboard() {
@@ -142,9 +148,7 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
-          </Typography>
+          <Logo />
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
@@ -172,6 +176,11 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Typography component="h1" variant="h5">Dashboard</Typography>
+          </Grid>
+        </Grid>
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
